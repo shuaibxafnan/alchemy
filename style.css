@@ -1,0 +1,1396 @@
+@font-face {
+    font-family: 'pangolin';
+    src: url(fonts/Pangolin-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'amatic';
+    src: url(fonts/AmaticSC-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'general';
+    src: url(fonts/GeneralSans-Regular.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'general';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #efefef;
+    padding: 3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+#full {
+    width: 100%;
+    display: flex;
+    background: #fff;
+    border-radius: 2em;
+    flex-direction: column;
+    padding: 2em;
+}
+
+#home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#home nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#home nav ul li a {
+    font-size: 1.15em;
+    text-transform: uppercase;
+    color: #000;
+}
+
+#home nav h3 a {
+    text-transform: uppercase;
+    font-size: 1.15em;
+    color: #ff007f;
+}
+
+#home nav li.contactBtn {
+    padding: 1em;
+    background: #ff007f;
+}
+
+#home nav li a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.hero {
+    background-image: url(images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3em;
+}
+
+.title h2 {
+    font-size: 12em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.75);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.heroContent {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    width: 50%;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.heroContent h4 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.75em;
+}
+
+.heroContent p {
+    font-size: 1.1em;
+    color: whitesmoke;
+}
+
+#vision {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+}
+
+.visionLeft {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.profileCard {
+    padding: 2em;
+    background: #ff007f;
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.profileCard h4 {
+    font-size: 2em;
+    font-weight: 10;
+    text-transform: uppercase;
+    /* font-family: 'Pangolin'; */
+}
+
+.profileCard p {
+    font-size: 1.25em;
+    color: #222;
+}
+
+.visionImg {
+    flex-basis: 40%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.visionImg img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.visionRight {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.descBx {
+    background: #efefef;
+}
+
+.visionTitle {
+    width: 100%;
+}
+
+.visionTitle h2 {
+    font-weight: 10;
+    font-size: 11em;
+    text-transform: uppercase;
+    color: #022449;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em 0em;
+}
+
+.aboutImg {
+    width: 100%;
+    background-image: url(images/pexels-pixabay-269077.jpg);
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.stats {
+    background: #fff;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    height: fit-content;
+}
+
+.statCard p {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.statCard h2 {
+    color: #ff007f;
+    font-size: 2em;
+    text-align: center;
+}
+
+.rules {
+    display: flex;
+    gap: 1em;
+}
+
+.ruleBx {
+    background: #efefef;
+    width: 25%;
+    height: 250px;
+    padding: 2em;
+    position: relative;
+    border-radius: 1em;
+}
+
+.ruleBx h2 {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    border-radius: 50%;
+    background: #ff007f;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    color: #fff;
+}
+
+.ruleBx div h4 {
+    /* font-family: 'Pangolin'; */
+    margin-bottom: .5em;
+    font-size: 1.15em;
+}
+/* ---------------------------------------------------------services------------------------------------------------- */
+
+#services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.servicesTitle h2 {
+    font-size: 11em;
+    text-transform: uppercase;
+    font-weight: 10;
+    color: #022449;
+}
+
+.serviceScroller {
+    display: flex;
+    gap: 1em;
+}
+
+.serviceImg {
+    flex-basis: 45%;
+    height: 600px;
+    width: 100%;
+}
+
+.serviceImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+.serviceBx {
+    flex-basis: 55%;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1em;
+}
+
+.hoverDiv {
+    width: 48%;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-radius: 1em;
+}
+
+.hoverCard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.hoverDiv:hover img {
+    opacity: 1;
+}
+
+.hoverDiv img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 1em;
+}
+
+.serviceBx div h4 {
+    font-size: 1.3em;
+    font-weight: 1000;
+    /* font-family: 'Pangolin'; */
+    text-transform: uppercase;
+}
+
+.servicesDown {
+    width: 100%;
+    background: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    max-height: fit-content;
+    padding: 2em;
+}
+
+.serviceBox {
+    width: 310px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 10px;
+    transition: .3s ease-out;
+    border-radius: 1em;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.serviceBox img {
+    width: 60px;
+    height: 60px;
+}
+
+.serviceBox h4 {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: 'general';
+    margin-bottom: 1em;
+}
+
+.serviceBox h6 {
+    font-size: 1.1em;
+    font-family: 'pangolin';
+}
+
+.serviceBox:hover {
+    background: #ff007f;
+    color: #fff;
+}
+
+.serviceBox h6 i {
+    margin-right: .75em;
+}
+
+/* ----------------------------------------------------------------work------------------------------------------------ */
+
+#work {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.projectTitle h2 {
+    font-size: 11em;
+    text-transform: uppercase;
+    color: #022449;
+    font-weight: 10;
+}
+
+.project {
+    display: flex;
+    gap: 4em;
+}
+
+.projectHolder {
+    flex-basis: 50%;
+    display: flex;
+    gap: 5em;
+    flex-direction: column;
+}
+
+.projectImg {
+    width: 100%;
+}
+
+.projectImg img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 2em;
+}
+
+.projectContent {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.projectContent h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.projectContent h4 {
+    font-size: 1.5em;
+    width: 90%;
+}
+
+.projectAlt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.imgImg {
+    width: 435px;
+    height: 435px;
+}
+
+.imgImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.linkBx {
+    width: 435px;
+    padding: 3em;
+    height: 435px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #efefef;
+    border-radius: 8px;
+}
+
+.linkBx button {
+    background: #ff007f;
+    padding: 1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.linkBx div {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.linkBx div h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.projectAltTitle h2 {
+    font-size: 10em;
+    text-transform: uppercase;
+    font-weight: 10;
+}
+
+.otherWork {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.otherWork h2 {
+    font-size: 11em;
+    text-transform: uppercase;
+    color: #022449;
+    font-weight: 10;
+}
+
+.otherBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.otherCard {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    width: 435px;
+}
+
+.otherImg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.otherImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.otherImg img:hover {
+    transform: scale(1.05);
+}
+
+.otherContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.otherContent h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 435px;
+    font-family: 'pangolin';
+}
+
+/* -----------------------------------------------------team----------------------------------------------------- */
+
+#join {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.joinTitle h2 {
+    font-size: 11em;
+    color: #022449;
+    text-transform: uppercase;
+    font-weight: 10;
+}
+
+.team {
+    display: flex;
+    gap: 1em;
+    overflow: hidden;
+}
+
+.member {
+    background-image: url(images/ppl1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 350px;
+    height: 450px;
+    border-radius: 8px;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.teamHead h2 {
+    font-size: 10em;
+    text-transform: uppercase;
+    font-family: 'Mogra';
+    text-align: center;
+}
+
+.member:nth-child(2) {
+    background-image: url(images/ppl2.jpg);
+}
+
+.member:nth-child(5) {
+    background-image: url(images/ppl3.jpg);
+}
+
+.member:nth-child(4) {
+    background-image: url(images/ppl4.jpg);
+}
+
+.member:nth-child(3) {
+    background-image: url(images/ppl5.jpg);
+    background-position: unset;
+}
+
+.member:nth-child(6) {
+    background-image: url(images/ppl6.jpg);
+}
+
+.icons {
+    display: flex;
+    gap: 1em;
+}
+
+.icons i {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #efefef;
+    background: #ff007f;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+
+.credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credits h4 {
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.credits span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    background: #ff007f;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.benefitsTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+}
+
+.benefitsTitle h5 {
+    font-size: 1.1em;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.benefitsBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.benefitCard {
+    border-radius: 2em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 3em;
+    width: 425px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.benefitCard h4 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.benefitCard p {
+    font-size: 1.1em;
+    color: #777;
+}
+
+.benefitHero {
+    padding-top: 2em;
+    display: flex;
+    gap: 2em;
+}
+
+.benefitLeft {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.benefitLeft h6 {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.benefitLeft h4 {
+    font-size: 4em;
+    width: 70%;
+}
+
+.benefitRight {
+    flex-basis: 50%;
+}
+
+.benefitRight img {
+    width: 100%;
+    object-fit: cover;
+    height: 450px;
+    border-radius: 8px;
+}
+
+.benefitLeft a span {
+    background: #ff007f;
+    padding: .5em;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.benefitLeft a {
+    margin-top: 2em;
+}
+
+.join {
+    display: flex;
+    gap: 4em;
+    padding-top: 2em;
+}
+
+.joinLeft {
+    flex-basis: 45%;
+}
+
+.joinLeft img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+.joinRight {
+    flex-basis: 55%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.joinRight h6 {
+    font-size: 1em;
+    text-transform: uppercase;
+    padding-top: 2em;
+}
+
+.apply {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.apply div {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0em;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.apply div span {
+    padding: .5em;
+    background: #ff007f;
+    color: #fff;
+}
+
+.apply div h3 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.apply div:nth-child(5) {
+    border: none;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 2em;
+    border-radius: 5px;
+    height: fit-content;
+    text-align: center;
+    width: 550px;
+}
+
+.form-input {
+    padding: .75em;
+    background: #ff007f;
+    outline: none;
+    border: none;
+    font-size: 1.15em;
+    border-radius: 8px;
+}
+
+.form-input::placeholder {
+    color: #000;
+    font-family: 'Pangolin';
+}
+
+.form-message::placeholder {
+    color: #000;
+    font-family: 'Pangolin';
+}
+
+.form-message {
+    background: #ff007f;
+    outline: none;
+    border: none;
+    font-size: 1.15em;
+    padding: .75em;
+    border-radius: 8px;
+}
+
+.popup-close {
+    padding: 1em;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 1000ms;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: #fff;
+    outline: 2px solid #ff007f;
+    color: #ff007f;
+  }
+  
+.popup-close:hover {
+    transform: scale(1.1);
+    outline: 2px solid #ff007f;
+    box-shadow: 4px 5px 17px -4px #ff007f;
+  }
+  
+.popup-close::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff007f;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+.popup-close:hover::before {
+    width: 250%;
+  }
+  
+
+.pop-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+
+/* --------------------------------------------------------contact------------------------------------------------------ */
+
+#contact {
+    padding: 2em 0em;
+    width: 100%;
+}
+
+.contactCard {
+    width: 100%;
+    background: #ff007f;
+    border-radius: 1em;
+    padding: 4em;
+    display: flex;
+}
+
+.contactLeft {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.contactLeft img {
+    width: 125px;
+    height: 125px;
+}
+
+.contactLeft div h6 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.contactLeft div h4 {
+    font-size: 4em;
+}
+
+.contactRight {
+    flex-basis: 50%;
+}
+
+.contactRight form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5em;
+}
+
+.input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #222;
+    padding: 1.5em;
+    font-size: 1.25em;
+}
+
+.input::placeholder {
+    color: #000;
+    text-transform: uppercase;
+}
+
+.message {
+    width: 100%;
+    height: 250px;
+    color: #000;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 1.5em;
+    font-size: 1.25em;
+}
+
+.message::placeholder {
+    color: #000;
+    text-transform: uppercase;
+}
+
+.submit {
+    background: #000;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.columns {
+    columns: 3 250px;
+    gap: 2em;
+    break-inside: avoid-column;
+    padding: 2em 0em;
+}
+
+.column {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1em;
+}
+
+.column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+@media only screen and (max-width:1285px) {
+    .title h2 {
+        font-size: 8em;
+    }
+
+    .imgBx2 {
+        display: none;
+    }
+
+    .titles h2 {
+        font-size: 7em;
+    }
+
+    .profileCard h4 {
+        font-size: 1.5em;
+    }
+
+    .statCard p {
+        font-size: 1.25em;
+    }
+
+    .statCard h2 {
+        font-size: 1.25em;
+    }
+
+    .rules {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ruleBx {
+        width: 49%;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    .serviceScroller {
+        flex-direction: column;
+    }
+
+    .serviceImg {
+        flex-basis: unset;
+        height: 500px;
+    }
+
+    .serviceBx {
+        flex-basis: unset;
+    }
+
+    .hoverDiv {
+        width: 49%;
+        height: 300px;
+        position: relative;
+    }
+
+    .contactLeft div h4 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .title h2 {
+        font-size: 5em;
+    }
+
+    .titles h2 {
+        font-size: 6em;
+    }
+
+    .imgImg {
+        width: 300px;
+    }
+
+    .linkBx {
+        max-width: 500px;
+    }
+
+    .otherCard {
+        width: 300px;
+        height: 350px;
+    }
+
+    .otherImg {
+        width: 100%;
+    }
+
+    .otherContent h4 {
+        font-size: 1em;
+    }
+
+    .benefitCard {
+        width: 300px;
+    }
+
+    .member {
+        width: 300px;
+    }
+
+    .member h4 {
+        font-size: 1em;
+    }
+
+    .benefitCard h4 {
+        font-size: 1em;
+    }
+
+    .join {
+        gap: 1.5em;
+    }
+
+    .apply div h3 {
+        font-size: 1em;
+    }
+
+    .benefitLeft h4 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    #vision {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .visionLeft {
+        flex-basis: unset;
+        width: 48.8%;
+    }
+
+    .visionRight {
+        flex-basis: unset;
+        width: 48.8%;
+    }
+
+    .visionImg {
+        flex-basis: unset;
+        width: 100%;
+    }
+
+    .hoverDiv {
+        width: 48%;
+    }
+
+    .ruleBx {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .titles h2 {
+        font-size: 4.5em;
+    }
+
+    .testimonialsDown {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .testimonialsUp {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .join {
+        flex-direction: column;
+    }
+
+    #full {
+        padding: 1em;
+    }
+
+    body {
+        padding: 0em;
+    }
+
+    #home nav {
+        display: none;
+    }
+
+    .testimonialsUp {
+        gap: 1em;
+    }
+
+    .statCard h4 {
+        font-size: 1em;
+    }
+
+    .statCard p {
+        font-size: 1em;
+    }
+
+    .stats {
+        gap: 1em;
+        padding: 1em;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    .visionLeft {
+        width: 100%;
+    }
+
+    .visionRight {
+        width: 100%;
+    }
+
+    .profileCard {
+        height: fit-content;
+    }
+
+    .visionImg img {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width:650px) {
+
+    .serviceScroller {
+        flex-direction: column;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .projectHolder {
+        gap: 1em;
+    }
+
+    .projectRight {
+        flex-direction: column-reverse;
+    }
+
+    .linkBx {
+        width: 350px;
+        height: 350px;
+        padding: 1em;
+    }
+
+    .imgImg {
+        height: 350px;
+        width: 350px;
+    }
+
+    .projectAlt2 {
+        flex-direction: column-reverse;
+    }
+
+    .linkBx div h2 {
+        font-size: 2em;
+    }
+
+    .otherCard {
+        width: 350px;
+    }
+
+    .member {
+        width: 350px;
+    }
+
+    .benefitCard {
+        width: 350px;
+    }
+
+    .benefitHero {
+        flex-direction: column;
+    }
+
+    .serviceBx {
+        gap: 1em;
+    }
+
+    #contact {
+        padding: 1em;
+    }
+
+    .contactCard {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .contactLeft div h4 {
+        font-size: 2em;
+    }
+
+    .hoverDiv {
+        width: 100%;
+        height: 250px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .ruleBx {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .member {
+        min-width: 250px;
+        padding: 1em;
+    }
+
+    .credits h4 {
+        font-size: 1em;
+    }
+
+    .icons {
+        gap: .5em;
+    }
+
+    .icons i {
+        font-size: 1em;
+    }
+
+    .contactRight form {
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .contactLeft div h4 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .title h2 {
+        font-size: 3em;
+    }
+
+    .hero {
+        padding: 1em;
+        height: 600px;
+    }
+
+    .contactRight form {
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .contactLeft div h4 {
+        font-size: 2em;
+    }
+}
