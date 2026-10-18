@@ -3,509 +3,351 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchemy | Data science and machine learning</title>
+    <meta name="description" content="Alchemy builds forecasting, analytics, anomaly detection and deployed ML for growing companies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
-    <title>Alchemy</title>
 </head>
 
 <body>
-    <section id="full">
-        <section id="home">
-            <nav>
-                <h3><a href="#home">Alchemy</a></h3>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                    <li><a href="#join">Join</a></li>
-                </ul>
-                <li class="contactBtn"><a href="#contact">Let's Talk</a></li>
-            </nav>
-            <div class="hero">
-                <div class="title">
-                    <h2>Innovative Solutions</h2>
+    <header class="nav" id="nav">
+        <a class="brand" href="#home">Alchemy</a>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+        <nav>
+            <ul id="menu">
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#join">Join</a></li>
+                <li><a class="nav-cta" href="#contact">Let's talk</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="scrim" id="scrim"></div>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <img class="hero-bg" src="images/hero.jpg" alt="">
+            <canvas id="chart" aria-hidden="true"></canvas>
+            <div class="wrap hero-in">
+                <h1>
+                    <span class="line"><span>Innovative</span></span>
+                    <span class="line"><span>Solutions</span></span>
+                </h1>
+                <div class="hero-row">
+                    <p>Data science and machine learning for forecasting, analytics and anomaly detection.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-pink" href="#work">See our work</a>
+                        <a class="btn btn-ghost" href="#contact">Let's talk</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Vision -->
+        <section class="section" id="vision">
+            <div class="wrap">
+                <h2 class="sec-title">Our vision</h2>
+                <div class="vision">
+                    <figure class="vision-img">
+                        <img src="images/vision.jpg" alt="" loading="lazy">
+                    </figure>
+                    <div class="vision-text">
+                        <div class="statement">
+                            <h3>Unleash your company's potential</h3>
+                            <p>We help unlock your company's potential through strategic analysis, creative campaigns and digital solutions.</p>
+                        </div>
+                        <div class="statement">
+                            <h3>Putting our clients' success first</h3>
+                            <p>We prioritize our clients' success by understanding their goals and delivering tailored solutions that drive real growth for their business.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about" id="about">
+                    <img src="images/pexels-pixabay-269077.jpg" alt="" loading="lazy">
+                    <div class="stats">
+                        <div class="stat"><strong data-to="100" data-suffix="+">100+</strong><span>Clients</span></div>
+                        <div class="stat"><strong data-to="250" data-suffix="+">250+</strong><span>Projects</span></div>
+                        <div class="stat"><strong data-to="3" data-suffix="">3</strong><span>Countries</span></div>
+                        <div class="stat"><strong data-to="400" data-suffix="+">400+</strong><span>Staff</span></div>
+                    </div>
+                </div>
+
+                <ul class="rules">
+                    <li>
+                        <h4>Building trust</h4>
+                        <p>We prioritize transparency and open communication to build trust with clients and create lasting relationships.</p>
+                    </li>
+                    <li>
+                        <h4>Bold moves, big impact</h4>
+                        <p>We challenge the status quo and take bold, calculated risks to create meaningful impact for our clients.</p>
+                    </li>
+                    <li>
+                        <h4>Building partnerships</h4>
+                        <p>We collaborate with our clients and stakeholders to build strong partnerships that drive mutual success.</p>
+                    </li>
+                    <li>
+                        <h4>Achieving real results</h4>
+                        <p>We focus on delivering tangible results that exceed our clients' expectations and drive real growth for their business.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section section-white" id="services">
+            <div class="wrap">
+                <h2 class="sec-title">Our services</h2>
+                <div class="svc">
+                    <div class="svc-stage" aria-hidden="true">
+                        <img class="on" src="images/trend.jpg" alt="" loading="lazy">
+                        <img src="images/model.jpg" alt="" loading="lazy">
+                        <img src="images/analytics.jpg" alt="" loading="lazy">
+                        <img src="images/anamoly.jpg" alt="" loading="lazy">
+                    </div>
+                    <ul class="svc-list">
+                        <li class="svc-item is-open" tabindex="0" data-i="0">
+                            <img class="svc-thumb" src="images/trend.jpg" alt="" loading="lazy">
+                            <h3>Forecasting</h3>
+                            <div class="svc-more"><p>Leverage our advanced forecasting techniques to accurately predict future trends and make informed business decisions.</p></div>
+                        </li>
+                        <li class="svc-item" tabindex="0" data-i="1">
+                            <img class="svc-thumb" src="images/model.jpg" alt="" loading="lazy">
+                            <h3>Deployment</h3>
+                            <div class="svc-more"><p>Seamlessly deploy and integrate our DS and ML models into your existing systems for real-time insights and automated decision-making.</p></div>
+                        </li>
+                        <li class="svc-item" tabindex="0" data-i="2">
+                            <img class="svc-thumb" src="images/analytics.jpg" alt="" loading="lazy">
+                            <h3>Analytics</h3>
+                            <div class="svc-more"><p>Gain valuable insights from your data through our robust analytics solutions, empowering data-driven strategies and informed decision-making.</p></div>
+                        </li>
+                        <li class="svc-item" tabindex="0" data-i="3">
+                            <img class="svc-thumb" src="images/anamoly.jpg" alt="" loading="lazy">
+                            <h3>Anomaly detection</h3>
+                            <div class="svc-more"><p>Utilize our advanced anomaly detection algorithms to identify and flag unusual patterns or outliers in your data, enabling proactive risk mitigation and operational efficiency.</p></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work -->
+        <section class="section section-navy" id="work">
+            <div class="wrap">
+                <h2 class="sec-title">Our work</h2>
+                <div class="works">
+                    <article class="work-card" style="--i:0">
+                        <div class="work-body">
+                            <h3>Odyssey</h3>
+                            <h4>Transforming a travel website for seamless user experience and personalized recommendations</h4>
+                            <p>Revamped UI/UX, implemented ML algorithms for personalized recommendations, resulting in increased user engagement, higher bookings, and improved customer satisfaction.</p>
+                        </div>
+                        <img src="images/risk.jpg" alt="Odyssey project" loading="lazy">
+                    </article>
+                    <article class="work-card" style="--i:1">
+                        <div class="work-body">
+                            <h3>AuraGlow</h3>
+                            <h4>Captivating radiance: Auraglow Cosmetics' visionary beauty products</h4>
+                            <p>Auraglow Company's completed project showcases a transformative product line, redefining beauty with innovative formulations, sustainable practices, and an exceptional customer experience.</p>
+                        </div>
+                        <img src="images/cosmetic2.jpg" alt="AuraGlow project" loading="lazy">
+                    </article>
+                    <article class="work-card" style="--i:2">
+                        <div class="work-body">
+                            <h3>Bistro</h3>
+                            <h4>Enhancing online presence and customer engagement for a restaurant website</h4>
+                            <p>Redesigned website layout, integrated online ordering system, and implemented targeted marketing campaigns, resulting in increased website traffic, higher conversions, and improved customer retention.</p>
+                        </div>
+                        <img src="images/forecast.jpg" alt="Bistro project" loading="lazy">
+                    </article>
+                    <article class="work-card" style="--i:3">
+                        <div class="work-body">
+                            <h3>Fusion</h3>
+                            <h4>Informed insights: Fusion's analytics solutions for industry transformation</h4>
+                            <p>Fusion's completed project provides comprehensive insights and analytics to boost property sales, optimize marketing strategies, and improve customer satisfaction for a leading company.</p>
+                        </div>
+                        <img src="images/slide5.jpg" alt="Fusion project" loading="lazy">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery strip -->
+        <section class="strip" aria-label="Project gallery">
+            <div class="m-track" id="mTrack">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+                <img src="images/cosmetic2.jpg" alt="" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Team and careers -->
+        <section class="section" id="join">
+            <div class="wrap rail-head">
+                <h2 class="sec-title">Our team</h2>
+                <div class="rail-nav">
+                    <button class="round" data-dir="-1" aria-label="Previous team members"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg></button>
+                    <button class="round" data-dir="1" aria-label="Next team members"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+                </div>
+            </div>
+            <div class="rail" id="teamRail">
+                <article class="member">
+                    <img src="images/ppl1.jpg" alt="Sakata Gintoki" draggable="false" loading="lazy">
+                    <div class="social">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z" /></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg></a>
+                    </div>
+                    <div class="credits"><h3>Sakata Gintoki</h3><span>CEO</span></div>
+                </article>
+                <article class="member">
+                    <img src="images/ppl2.jpg" alt="Okita Sogo" draggable="false" loading="lazy">
+                    <div class="social">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z" /></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg></a>
+                    </div>
+                    <div class="credits"><h3>Okita Sogo</h3><span>CFO</span></div>
+                </article>
+                <article class="member">
+                    <img src="images/ppl5.jpg" alt="Hayasaka Ai" draggable="false" loading="lazy">
+                    <div class="social">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z" /></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg></a>
+                    </div>
+                    <div class="credits"><h3>Hayasaka Ai</h3><span>CMO</span></div>
+                </article>
+                <article class="member">
+                    <img src="images/ppl4.jpg" alt="Jason Roy" draggable="false" loading="lazy">
+                    <div class="social">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z" /></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg></a>
+                    </div>
+                    <div class="credits"><h3>Jason Roy</h3><span>Manager</span></div>
+                </article>
+                <article class="member">
+                    <img src="images/ppl3.jpg" alt="Tsukuyo" draggable="false" loading="lazy">
+                    <div class="social">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z" /></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg></a>
+                    </div>
+                    <div class="credits"><h3>Tsukuyo</h3><span>Developer</span></div>
+                </article>
+                <article class="member">
+                    <img src="images/ppl6.jpg" alt="Hayakawa Aki" draggable="false" loading="lazy">
+                    <div class="social">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z" /></svg></a>
+                        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg></a>
+                    </div>
+                    <div class="credits"><h3>Hayakawa Aki</h3><span>CIO</span></div>
+                </article>
             </div>
 
-            <div class="visionTitle titles">
-                <h2>Our Vision</h2>
-            </div>
-            <div id="vision">
-                <div class="visionLeft">
-                    <div class="profileCard">
-                        <h4>Unleash your company's potential</h4>
-                        <p>We help unlock your company's potential through strategic Analysis, creative campaigns,
-                            and digital solutions.</p>
+            <div class="wrap">
+                <div class="career">
+                    <div class="career-text">
+                        <h3>Want to be part of our team?</h3>
+                        <a class="btn btn-pink" href="#contact">Join our team</a>
                     </div>
+                    <img src="images/benefit.jpg" alt="" loading="lazy">
                 </div>
-                <div class="visionRight">
-                    <div class="descBx profileCard">
-                        <h4>PUTTING OUR CLIENTS' SUCCESS FIRST</h4>
-                        <p>We prioritize our clients' success by understanding their goals and delivering tailored
-                            solutions that drive real growth for their business.</p>
-                    </div>
-                </div>
-                <div class="visionImg">
-                    <img src="images/vision.jpg" alt="">
-                </div>
-            </div>
-            <div id="about">
-                <div class="aboutImg">
-                    <div class="stats">
-                        <div class="statCard">
-                            <p>Clients</p>
-                            <h2>100+</h2>
-                        </div>
-                        <div class="statCard">
-                            <p>Projects</p>
-                            <h2>250+</h2>
-                        </div>
-                        <div class="statCard">
-                            <p>Countries</p>
-                            <h2>3</h2>
-                        </div>
-                        <div class="statCard">
-                            <p>Staff</p>
-                            <h2>400+</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="rules">
-                    <div class="ruleBx">
-                        <h2>01</h2>
-                        <div>
-                            <h4>BUILDING TRUST</h4>
-                            <p>We prioritize transparency and open communication to build trust with
-                                clients and create lasting relationships.</p>
-                        </div>
-                    </div>
-                    <div class="ruleBx">
-                        <h2>02</h2>
-                        <div>
-                            <h4>BOLD MOVES, BIG IMPACT</h4>
-                            <p>We challenge the status quo and take bold and calculated risks to create meaningful impact for our
-                                clients.</p>
-                        </div>
-                    </div>
-                    <div class="ruleBx">
-                        <h2>03</h2>
-                        <div>
-                            <h4>BUILDING PARTNERSHIPS</h4>
-                            <p>We collaborate with our clients and stakeholders to build strong partnerships that drive
-                                mutual success.</p>
-                        </div>
-                    </div>
-                    <div class="ruleBx">
-                        <h2>04</h2>
-                        <div>
-                            <h4>ACHIEVING REAL RESULTS</h4>
-                            <p>We focus on delivering tangible results that exceed our clients' expectations and drive
-                                real growth for their business.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="services">
-            <div class="servicesTitle titles">
-                <h2>Our services</h2>
-            </div>
-            <div class="serviceScroller">
-                <div class="serviceImg">
-                    <img src="images/services.jpg" alt="">
-                </div>
-                <div class="serviceBx">
-                    <div class="hoverDiv">
-                        <div class="hoverCard hoverCard1">
-                            <h4>Forecasting</h4>
-                            <p>Leverage our advanced forecasting techniques to accurately predict future trends and make
-                                informed
-                                business decisions.</p>
-                        </div>
-                        <img src="images/trend.jpg" alt="">
-                    </div>
-                    <div class="hoverDiv">
-                        <div class="hoverCard hoverCard1">
-                            <h4>Deployment</h4>
-                            <p>Seamlessly deploy and integrate our DS and ML models into your existing systems for
-                                real-time
-                                insights and automated decision-making.</p>
-                        </div>
-                        <img src="images/model.jpg" alt="">
-                    </div>
-                    <div class="hoverDiv">
-                        <div class="hoverCard hoverCard3">
-                            <h4>Analytics</h4>
-                            <p>Gain valuable insights from your data through our robust analytics solutions, empowering
-                                data-driven
-                                strategies and informed decision-making.</p>
-                        </div>
-                        <img src="images/analytics.jpg" alt="">
-                    </div>
-                    <div class="hoverDiv">
-                        <div class="hoverCard hoverCard3">
-                            <h4>Anomaly</h4>
-                            <p>Utilize our advanced anomaly detection algorithms to identify and flag unusual patterns
-                                or
-                                outliers in your data, enabling proactive risk mitigation and operational efficiency.
-                            </p>
-                        </div>
-                        <img src="images/anamoly.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="work">
-            <div class="projectTitle titles">
-                <h2>Our Works</h2>
-            </div>
-            <div class="project">
-                <div class="projectLeft projectHolder">
-                    <div class="projectContent">
-                        <h2>Odyssey</h2>
-                        <h4>Transforming a Travel Website for Seamless User Experience and Personalized Recommendations
-                        </h4>
-                        <p>Revamped UI/UX, implemented ML algorithms for personalized recommendations, resulting in
-                            increased user engagement, higher bookings, and improved customer satisfaction.</p>
-                    </div>
-                    <div class="projectImg">
-                        <img src="images/risk.jpg" alt="">
-                    </div>
-                    <div class="projectContent">
-                        <h2>AuraGlow</h2>
-                        <h4>Captivating Radiance: Auraglow Cosmetics' Visionary Beauty Products
-                        </h4>
-                        <p>Auraglow Company's completed project showcases a transformative product line, redefining
-                            beauty with innovative formulations, sustainable practices, and an exceptional customer
-                            experience.</p>
-                    </div>
-                    <div class="projectImg">
-                        <img src="images/cosmetic2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="projectRight projectHolder">
-                    <div class="projectImg">
-                        <img src="images/forecast.jpg" alt="">
-                    </div>
-                    <div class="projectContent">
-                        <h2>Bistro</h2>
-                        <h4>Enhancing Online Presence and Customer Engagement for a Restaurant Website</h4>
-                        <p>Redesigned website layout, integrated online ordering system, and implemented targeted
-                            marketing campaigns, resulting in increased website traffic, higher conversions, and
-                            improved customer retention.</p>
-                    </div>
-                    <div class="projectImg">
-                        <img src="images/slide5.jpg" alt="">
-                    </div>
-                    <div class="projectContent">
-                        <h2>Fusion</h2>
-                        <h4>Informed Insights: Fusion's Analytics Solutions for Industry Transformation</h4>
-                        <p>Fusion's completed project provides comprehensive insights and analytics to boost property
-                            sales, optimize marketing strategies, and improve customer satisfaction for a leading
-                            company.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="columns">
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-            <div class="column">
-                <img src="images/cosmetic2.jpg" alt="">
-            </div>
-        </section>
-        <section id="join">
-            <div class="joinTitle titles">
-                <h2>Our Team</h2>
-            </div>
-            <div class="team">
-                <div class="member" draggable="true">
-                    <div class="icons">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="credits">
-                        <h4>Sakata Gintoki</h4>
-                        <span>Ceo</span>
-                    </div>
-                </div>
-                <div class="member" draggable="true">
-                    <div class="icons">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="credits">
-                        <h4>Okita Sogo</h4>
-                        <span>Cfo</span>
-                    </div>
-                </div>
-                <div class="member" draggable="true">
-                    <div class="icons">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="credits">
-                        <h4>Hayasaka Ai</h4>
-                        <span>cmo</span>
-                    </div>
-                </div>
-                <div class="member" draggable="true">
-                    <div class="icons">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="credits">
-                        <h4>Jason Roy</h4>
-                        <span>Manager</span>
-                    </div>
-                </div>
-                <div class="member" draggable="true">
-                    <div class="icons">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="credits">
-                        <h4>Tsukuyo</h4>
-                        <span>Developer</span>
-                    </div>
-                </div>
-                <div class="member" draggable="true">
-                    <div class="icons">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="credits">
-                        <h4>Hayakawa AKi</h4>
-                        <span>cio</span>
-                    </div>
-                </div>
-            </div>
-            <div class="benefits">
-                <div class="benefitHero">
-                    <div class="benefitLeft">
-                        <h6>Career</h6>
-                        <h4>Want to be Part of our Team ?</h4>
-                        <a href="#contact"><span>Join Our Team</span></a>
-                    </div>
-                    <div class="benefitRight">
-                        <img src="images/benefit.jpg" alt="">
-                    </div>
-                </div>
-                <div class="benefitsTitle">
-                    <h5>Your Benefits</h5>
-                </div>
-                <div class="benefitsBx">
-                    <div class="benefitCard">
-                        <h4>Growth Opportunities</h4>
-                        <p>Unlock your potential with ample growth opportunities and continuous learning in a dynamic
-                            and innovative environment.</p>
-                    </div>
-                    <div class="benefitCard">
-                        <h4>Cutting-Edge Technology</h4>
-                        <p>Work with state-of-the-art technologies and tools, leveraging the latest advancements in DS
-                            and ML.</p>
-                    </div>
-                    <div class="benefitCard">
-                        <h4>Collaborative Culture</h4>
-                        <p>Join a collaborative team where diverse perspectives and ideas are valued, fostering
-                            creativity and innovation.</p>
-                    </div>
-                    <div class="benefitCard">
-                        <h4>Impactful Work</h4>
-                        <p>Contribute to meaningful projects that make a difference, utilizing DS and ML to solve
-                            real-world challenges.</p>
-                    </div>
-                    <div class="benefitCard">
-                        <h4>Professional Development</h4>
-                        <p>Access to workshops, training programs, and mentorship to enhance your skills and advance
-                            your career.</p>
-                    </div>
-                    <div class="benefitCard">
-                        <h4>Work-Life Balance</h4>
-                        <p>Enjoy a healthy work-life balance with flexible hours, remote work options, and employee
-                            well-being initiatives.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="join">
-                <div class="joinLeft">
-                    <img src="images/join.jpg" alt="">
-                </div>
-                <div class="joinRight">
-                    <h6>Open Positions</h6>
-                    <div class="apply">
-                        <div>
-                            <h3>Data Scientist</h3>
-                            <span class="apply-now">Apply now</span>
-                        </div>
-                        <div>
-                            <h3>Full Stack Developer</h3>
-                            <span class="apply-now">Apply now</span>
-                        </div>
-                        <div>
-                            <h3>Data Analyst</h3>
-                            <span class="apply-now">Apply now</span>
-                        </div>
-                        <div>
-                            <h3>Backend Developer</h3>
-                            <span class="apply-now">Apply now</span>
-                        </div>
-                        <div>
-                            <h3>Ml Engineer</h3>
-                            <span class="apply-now">Apply now</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- <section id="testimonials">
-            <div class="testimonialsUp">
-                <div class="testimony">
-                    <h4>Luminary Retail Co.</h4>
-                    <p>Working with Alchemy transformed our business. Their insights led to a 30% revenue increase</p>
-                </div>
-                <div class="testimony">
-                    <h4>Silverstone Manufacturing Ltd.</h4>
-                    <p>Alchemy's demand forecasting enabled us to optimize inventory and boost customer satisfaction</p>
-                </div>
-                <div class="testimony">
-                    <h4>Nexus Financial Services.</h4>
-                    <p>The analytics expertise of Alchemy empowered us to make data-driven decisions with confidence</p>
-                </div>
-            </div>
-            <div class="testimonialsDown">
-                <div class="testimony">
-                    <h4>Gastronomy Delights.</h4>
-                    <p>Alchemy's advanced analytics enhanced our marketing campaigns, driving a 20% increase in
-                        conversions.</p>
-                </div>
-                <div class="testimony">
-                    <h4>Safeguard Bank.</h4>
-                    <p>Alchemy's ML models helped us detect and prevent fraud, safeguarding our financial operations.
-                    </p>
-                </div>
-                <div class="testimony">
-                    <h4>Electra E-commerce Co.</h4>
-                    <p>Alchemy's model optimization project resulted in higher conversions and improved online presence.
-                    </p>
-                </div>
-            </div>
-        </section> -->
-        <section id="contact">
-            <div class="contactCard">
-                <div class="contactLeft">
-                    <img src="images/4923070_sketch_icon.svg" alt="">
+
+                <h3 class="sub-title">Your benefits</h3>
+                <ul class="perks">
+                    <li><h4>Growth opportunities</h4><p>Unlock your potential with ample growth opportunities and continuous learning in a dynamic and innovative environment.</p></li>
+                    <li><h4>Cutting-edge technology</h4><p>Work with state-of-the-art technologies and tools, leveraging the latest advancements in DS and ML.</p></li>
+                    <li><h4>Collaborative culture</h4><p>Join a collaborative team where diverse perspectives and ideas are valued, fostering creativity and innovation.</p></li>
+                    <li><h4>Impactful work</h4><p>Contribute to meaningful projects that make a difference, utilizing DS and ML to solve real-world challenges.</p></li>
+                    <li><h4>Professional development</h4><p>Access to workshops, training programs, and mentorship to enhance your skills and advance your career.</p></li>
+                    <li><h4>Work-life balance</h4><p>Enjoy a healthy work-life balance with flexible hours, remote work options, and employee well-being initiatives.</p></li>
+                </ul>
+
+                <div class="openings">
+                    <img src="images/join.jpg" alt="" loading="lazy">
                     <div>
-                        <h6>Contact</h6>
-                        <h4>Let's Create your next big project together.</h4>
+                        <h3 class="sub-title">Open positions</h3>
+                        <ul class="roles">
+                            <li><button class="role" data-role="Data Scientist"><span>Data Scientist</span><em>Apply now</em></button></li>
+                            <li><button class="role" data-role="Full Stack Developer"><span>Full Stack Developer</span><em>Apply now</em></button></li>
+                            <li><button class="role" data-role="Data Analyst"><span>Data Analyst</span><em>Apply now</em></button></li>
+                            <li><button class="role" data-role="Backend Developer"><span>Backend Developer</span><em>Apply now</em></button></li>
+                            <li><button class="role" data-role="ML Engineer"><span>ML Engineer</span><em>Apply now</em></button></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="contactRight">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="name" id="" class="input" placeholder="Name">
-                        <input type="email" name="email" id="" class="input" placeholder="Email">
-                        <textarea name="message" id="msg" cols="30" rows="10" class="message"
-                            placeholder="Message"></textarea>
-                        <input type="submit" value="Send Message" class="submit">
-                        <span id="msg"></span>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section section-top-tight" id="contact">
+            <div class="wrap">
+                <div class="contact">
+                    <div class="contact-left">
+                        <img src="images/4923070_sketch_icon.svg" alt="">
+                        <h2>Let's create your next big project together.</h2>
+                    </div>
+                    <form id="contactForm" name="submit-to-google-sheet">
+                        <label for="cName">Name</label>
+                        <input type="text" name="name" id="cName" autocomplete="name" required>
+                        <label for="cEmail">Email</label>
+                        <input type="email" name="email" id="cEmail" autocomplete="email" required>
+                        <label for="cMsg">Message</label>
+                        <textarea name="message" id="cMsg" rows="4" required></textarea>
+                        <button class="btn btn-pink" type="submit">Send message</button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
         </section>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script>
-            const slider2 = document.querySelector(".team");
-            let isDragStart = false, prevPageX, prevScrollleft;
+    </main>
 
-            const dragStart = (e) => {
-                isDragStart = true;
-                prevPageX = e.pageX || e.touches[0].pageX;
-                prevScrollleft = slider2.scrollLeft;
-            }
+    <footer class="foot">
+        <div class="wrap foot-in">
+            <span>Alchemy</span>
+            <span>&copy; 2026 Alchemy. All rights reserved.</span>
+            <a href="#home">Back to top</a>
+        </div>
+    </footer>
 
-            const dragging = (e) => {
-                if (!isDragStart) return;
-                e.preventDefault();
-                let positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-                slider2.scrollLeft = prevScrollleft - positionDiff;
-            }
+    <dialog id="applyDialog" aria-labelledby="applyTitle">
+        <form id="applyForm" name="submit-to-google-sheet">
+            <div class="dlg-head">
+                <h3 id="applyTitle">Apply to join Alchemy</h3>
+                <button type="button" class="dlg-close" id="dlgClose" aria-label="Close">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg>
+                </button>
+            </div>
+            <label for="aName">Name</label>
+            <input type="text" name="name" id="aName" autocomplete="name" required>
+            <label for="aRole">Role</label>
+            <input type="text" name="role" id="aRole" readonly>
+            <label for="aEmail">Email</label>
+            <input type="email" name="email" id="aEmail" autocomplete="email" required>
+            <label for="aLink">Portfolio or LinkedIn link</label>
+            <input type="url" name="link" id="aLink" placeholder="https://">
+            <label for="aMsg">Tell us something about you</label>
+            <textarea name="message" id="aMsg" rows="4" required></textarea>
+            <button class="btn btn-pink" type="submit">Send application</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </dialog>
 
-            const dragStop = () => {
-                isDragStart = false;
-            }
-
-            slider2.addEventListener("mousedown", dragStart);
-            slider2.addEventListener("mousemove", dragging);
-            slider2.addEventListener("mouseup", dragStop);
-            slider2.addEventListener("touchstart", dragStart);
-            slider2.addEventListener("touchmove", dragging);
-            slider2.addEventListener("touchend", dragStop);
-        </script>
-        <script>
-            const applyNowButtons = document.querySelectorAll(".apply-now");
-            const popupOverlay = document.createElement("div");
-            popupOverlay.className = "popup-overlay";
-            const popupContent = document.createElement("div");
-            popupContent.className = "popup-content";
-            popupContent.innerHTML = `
-  <form name="submit-to-google-sheet" class="pop-up-form">
-  <input type="text" name="name" id="" class="form-input" placeholder="Name">
-  <input type="text" name="name" id="" class="form-input" placeholder="Role">
-  <input type="email" name="email" id="" class="form-input" placeholder="Email">
-  <textarea name="message" id="msg" cols="30" rows="7" class="form-message" placeholder="Tell us Something About You"></textarea>
-  <input type="file" name="file" id="" class="file-form">
-  <input type="submit" value="Send Message" class="submit-form popup-close">
-  <span id="msg"></span>
-  </form>
-`;
-
-            function showPopup() {
-                document.body.appendChild(popupOverlay);
-                popupOverlay.appendChild(popupContent);
-            }
-
-            function closePopup() {
-                document.body.removeChild(popupOverlay);
-            }
-
-            applyNowButtons.forEach((button) => {
-                button.addEventListener("click", showPopup);
-            });
-
-            popupContent.querySelector(".popup-close").addEventListener("click", closePopup);
-
-        </script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
